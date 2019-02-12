@@ -1,0 +1,15 @@
+{
+  "name": "vue-utilities",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/Kitware/vue-utilities#readme",
+  "dependencies": {
+    "mousetrap": "~1.6.2"
+  },
+  "peerDependencies": {
+    "vue": "~2.x",
+    "vuetify": "~1.3.11"
+  }
+}
