@@ -17,7 +17,7 @@ new Vue({
 .$snackbarAttach();
 ```
 ### Usage
-Call $snackbar() Within Vue Component
+Call `this.$snackbar()` Within Vue Component
 
 Basic usage
 ```JavaScript

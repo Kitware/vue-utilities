@@ -7,6 +7,7 @@ export default function install(Vue) {
     var div = document.createElement("div");
     this.$el.appendChild(div);
     component.$mount(div);
+    return this;
   };
   Vue.prototype.$snackbar = function({
     text,
