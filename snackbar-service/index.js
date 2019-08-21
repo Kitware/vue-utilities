@@ -3,7 +3,10 @@ import Snackbar from "./Snackbar";
 export default function install(Vue) {
   var SnackbarComponent = Vue.extend(Snackbar);
   var component = new SnackbarComponent();
-  Vue.prototype.$snackbarAttach = function() {
+  Vue.prototype.$snackbarAttach = function(options) {
+    if (options) {
+      component.$data.options = options;
+    }
     var div = document.createElement("div");
     this.$el.appendChild(div);
     component.$mount(div);
@@ -39,5 +42,8 @@ export default function install(Vue) {
   };
   Vue.prototype.$snackbar.hide = function() {
     component.$data.show = false;
+  };
+  Vue.prototype.$snackbar.setOptions = function(options) {
+    component.$data.options = options;
   };
 }

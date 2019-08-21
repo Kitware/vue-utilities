@@ -35,4 +35,16 @@ this.$snackbar({
   }
 })
 ```
+Set snackbar options
+```JavaScript
+this.$snackbar.setOptions({ bottom: true })
+```
+or set with `$snackbarAttach()`
+```JavaScript
+new Vue({
+  render: h => h(App)
+}).$mount("#app")
+.$snackbarAttach({ right: true });
+```
+
 By default new Snackbar is queued. But immediate option will hide current snackbar and show new one immediately.

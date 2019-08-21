@@ -1,7 +1,7 @@
 <template>
   <v-snackbar
     v-model="show"
-    :bottom="true"
+    v-bind="options"
     :timeout="timeout">
     {{ text }}
     <v-btn
@@ -17,13 +17,13 @@
 <script>
 export default {
   name: "Snackbar",
-  props: {},
   data: () => ({
     show: false,
     text: "",
     button: "",
     callback: null,
-    timeout: 0
+    timeout: 0,
+    options: { left: true }
   }),
   methods: {
     buttonClicked() {
