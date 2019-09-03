@@ -10,6 +10,6 @@
   },
   "peerDependencies": {
     "vue": "~2.x",
-    "vuetify": "~1.5.18"
+    "vuetify": "~2.x"
   }
 }
