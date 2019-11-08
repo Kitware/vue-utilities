@@ -7,10 +7,10 @@
       </v-card-text>
       <v-card-actions>
         <v-spacer></v-spacer>
-        <v-btn v-if="confirm" flat @click="negative">
+        <v-btn v-if="confirm" text @click="negative">
           {{ negativeButton }}
         </v-btn>
-        <v-btn color="primary" flat @click="positive">
+        <v-btn color="primary" text @click="positive">
           {{ positiveButton }}
         </v-btn>
       </v-card-actions>
@@ -19,8 +19,11 @@
 </template>
 
 <script>
+import Vuetify from 'vuetify';
+
 export default {
   name: "Prompt",
+  vuetify: new Vuetify(),
   props: {},
   data: () => ({
     show: false,
