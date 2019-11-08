@@ -19,11 +19,9 @@
 </template>
 
 <script>
-import Vuetify from 'vuetify';
-
 export default {
   name: "Prompt",
-  vuetify: new Vuetify(),
+  vuetify: null,
   props: {},
   data: () => ({
     show: false,
