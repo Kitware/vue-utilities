@@ -4,8 +4,11 @@ A Vue plugin that provides a simple prompt service with Vutify components in Vue
 ### Install
 Install plugin
 ```JavaScript
+import Vuetify from "vuetify/lib";
 import promptService from "vue-utilities/prompt-service";
-Vue.use(promptService);
+
+let vuetify = new Vuetify();
+Vue.use(promptService(vuetify));
 ```
 Attach container element to DOM after Vue app initialization
 ```JavaScript

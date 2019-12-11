@@ -6,8 +6,11 @@ This plugin depends on Vuetify `<v-snackbar>` component
 ### Install
 Install plugin
 ```JavaScript
+import Vuetify from "vuetify/lib";
 import snackbarService from "vue-utilities/snackbar-service";
-Vue.use(snackbarService);
+
+let vuetify = new Vuetify();
+Vue.use(snackbarService(vuetify));
 ```
 Attach container element to DOM after Vue app initialization
 ```JavaScript
