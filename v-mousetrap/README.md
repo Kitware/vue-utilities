@@ -38,3 +38,7 @@ By default event is bound to the `document`, but with the `.element` modifier th
 ```html
 <textarea v-mousetrap.element="{ bind:'esc', handler: el => el.blur() }"></textarea>
 ```
+Binds the `keypress` event by default, but supports handlers for all event types (mousetrap supports `keypress`, `keydown`, and `keyup`) by passing an object instead of a function.
+```html
+<div v-mousetrap="{ bind: 'b', handler: { keydown: keyDownHandler, keyup: keyUpHandler }"></div>
+```

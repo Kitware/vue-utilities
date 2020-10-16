@@ -8,10 +8,20 @@ function bind(el, value, bindElement) {
     value = [value];
   }
   value.forEach(({ bind, handler, disabled }) => {
+    const handlerType = typeof(handler);
     if (!disabled) {
-      mousetrap.bind(bind, function() {
-        handler.apply(this, [el, ...arguments]);
-      });
+      if (handlerType === 'function') {
+        mousetrap.bind(bind, function() {
+          handler.apply(this, [el, ...arguments]);
+        });
+      } else if (handlerType === 'object') {
+        Object.keys(handler).forEach((eventType) => {
+          const eventHandler = handler[eventType];
+          mousetrap.bind(bind, function() {
+            eventHandler.apply(this, [el, ...arguments]);
+          }, eventType);
+        });
+      }
     }
   });
 }
